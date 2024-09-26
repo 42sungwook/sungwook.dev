@@ -1,6 +1,19 @@
+'use client'
+
 import { Button, H1 } from '@/ui'
+import { FieldValues, useForm } from 'react-hook-form'
+import {
+  ContactEmailInput,
+  ContactMessageInput,
+  ContactNameInput
+} from './ContactFormInput'
 
 function Contact() {
+  const { register, handleSubmit } = useForm()
+  const onSubmit = async (data: FieldValues) => {
+    console.log(data)
+  }
+
   return (
     <section
       id="ABOUT"
@@ -8,14 +21,17 @@ function Contact() {
     >
       <div className="section-container">
         <H1 className="mb-20 text-center">CONTACT</H1>
-        <div className="flex flex-col bg-white shadow-lg rounded-md gap-8 p-16 max-w-[80rem] w-[95%] mx-auto">
-          <div className="bg-gray-200 w-100 h-16 rounded-md"></div>
-          <div className="bg-gray-200 w-100 h-16 rounded-md"></div>
-          <div className="bg-gray-200 w-100 h-40 rounded-md"></div>
+        <form
+          className="flex flex-col bg-white shadow-lg rounded-md gap-8 p-16 max-w-[80rem] w-[95%] mx-auto"
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <ContactNameInput register={register} />
+          <ContactEmailInput register={register} />
+          <ContactMessageInput register={register} />
           <div className="flex justify-end">
-            <Button>SUBMIT</Button>
+            <Button type="submit">SUBMIT</Button>
           </div>
-        </div>
+        </form>
       </div>
     </section>
   )
