@@ -9,22 +9,29 @@ import {
 } from './ContactFormInput'
 
 function Contact() {
-  const { register, handleSubmit } = useForm()
+  const { register, handleSubmit, reset } = useForm()
+
   const onSubmit = async (data: FieldValues) => {
-    const response = await fetch('/api/email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
+    try {
+      const response = await fetch('/api/email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
 
-    const result = await response.json()
+      const result = await response.json()
 
-    if (result.status === 200) {
-      alert('메일이 전송되었습니다.')
-    } else {
-      alert('메일 전송에 실패했습니다.')
+      if (result.status === 200) {
+        alert('메일이 전송되었습니다.')
+        reset()
+      } else {
+        alert(`메일 전송에 실패했습니다.`)
+      }
+    } catch (error) {
+      console.error('error:', error)
+      alert('메일 전송 중 오류가 발생했습니다. 나중에 다시 시도해 주세요.')
     }
   }
 

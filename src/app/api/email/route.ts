@@ -24,12 +24,10 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
           text: message,
           replyTo: email
         },
-        (err, info) => {
+        (err) => {
           if (err) {
-            console.log(err)
             reject(err)
           } else {
-            console.log(info)
             resolve()
           }
         }
