@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Button } from '@/ui'
 
 function Home() {
   return (
@@ -13,11 +13,7 @@ function Home() {
           <p>주로 프론트엔드 개발을 하고 있으며 꾸준히 학습을 하고 있습니다</p>
         </div>
         <div className="mt-8 justify-center items-center flex">
-          <button className="bg-blue-500 text-white px-16 py-4 rounded-sm shadow-md hover:shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-1">
-            <Link href="./#PROJECTS">
-              <p>프로젝트 보기</p>
-            </Link>
-          </button>
+          <Button link="./#PROJECTS">프로젝트 보기</Button>
         </div>
       </div>
     </div>
