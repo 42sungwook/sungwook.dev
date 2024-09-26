@@ -19,16 +19,14 @@ function Contact() {
       body: JSON.stringify(data)
     })
 
-    if (response.ok) {
-      alert('메일이 성공적으로 전송되었습니다.')
-    } else {
-      alert('메일 전송에 실패했습니다.')
-    }
+    const result = await response.json()
+
+    console.log(result)
   }
 
   return (
     <section
-      id="ABOUT"
+      id="CONTACT"
       className="section bg-gradient-to-br from-gray-50 via-gray to-gray-100"
     >
       <div className="section-container">
