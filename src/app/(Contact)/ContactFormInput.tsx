@@ -1,4 +1,4 @@
-import { FieldValues, UseFormRegister } from 'react-hook-form'
+import type { FieldValues, UseFormRegister } from 'react-hook-form'
 
 type InputProps = {
   register: UseFormRegister<FieldValues>

@@ -1,7 +1,7 @@
 'use client'
 
 import { Button, H1 } from '@/ui'
-import { FieldValues, useForm } from 'react-hook-form'
+import { type FieldValues, useForm } from 'react-hook-form'
 import {
   ContactEmailInput,
   ContactMessageInput,
@@ -11,7 +11,19 @@ import {
 function Contact() {
   const { register, handleSubmit } = useForm()
   const onSubmit = async (data: FieldValues) => {
-    console.log(data)
+    const response = await fetch('/api/email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+
+    if (response.ok) {
+      alert('메일이 성공적으로 전송되었습니다.')
+    } else {
+      alert('메일 전송에 실패했습니다.')
+    }
   }
 
   return (
