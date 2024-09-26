@@ -3,12 +3,13 @@ import Skills from './Skills'
 
 function About() {
   return (
-    <section id="ABOUT">
-      <div className="flex flex-col justify-center w-full py-20 px-10 bg-gradient-to-br from-blue-50 via-white to-purple-50">
-        <div className="mb-20 text-center">
-          <H1>ABOUT ME</H1>
-        </div>
-        <div className="grid grid-cols-2 gap-40">
+    <section
+      id="ABOUT"
+      className="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-20"
+    >
+      <div className="container">
+        <H1 className="mb-20 text-center">ABOUT ME</H1>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-40">
           <div>
             <H2 className="mb-8">저는 이런 사람이에요!</H2>
             <p className="break-words overflow-wrap-anywhere">
@@ -23,7 +24,7 @@ function About() {
           </div>
           <div>
             <H2 className="mb-8">기술 스택</H2>
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap gap-2">
               <Skills>HTML</Skills>
               <Skills>CSS</Skills>
               <Skills>JavaScript</Skills>
