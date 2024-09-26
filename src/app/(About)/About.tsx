@@ -7,7 +7,7 @@ function About() {
       id="ABOUT"
       className="section bg-gradient-to-br from-blue-50 via-white to-purple-50"
     >
-      <div className="container">
+      <div className="section-container">
         <H1 className="mb-20 text-center">ABOUT ME</H1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-40">
           <div>

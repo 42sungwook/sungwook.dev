@@ -1,8 +1,10 @@
 import { Button } from '@/ui'
+import Image from 'next/image'
+import Link from 'next/link'
 
 function Home() {
   return (
-    <div className="flex items-center justify-center w-full h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    <div className="flex items-center justify-center w-full h-[90vh] bg-gradient-to-br from-gray-50 to-gray-100">
       <div>
         <h1 className="text-6xl">안녕하세요, 김성욱입니다</h1>
         <div className="flex flex-col mt-10 text-center">
@@ -16,6 +18,18 @@ function Home() {
           <Button link="./#PROJECTS">프로젝트 보기</Button>
         </div>
       </div>
+      <Link
+        href="./#ABOUT"
+        className="absolute bottom-20 inline-block"
+      >
+        <Image
+          className="animate-bounce-top"
+          src="/arrow_down.svg"
+          alt="arrow_down"
+          width={50}
+          height={50}
+        />
+      </Link>
     </div>
   )
 }
