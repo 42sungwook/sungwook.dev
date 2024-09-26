@@ -33,4 +33,7 @@ body {
   .container {
     @apply max-w-[120rem] mx-auto w-[92%];
   }
+  .section {
+    @apply py-28;
+  }
 }

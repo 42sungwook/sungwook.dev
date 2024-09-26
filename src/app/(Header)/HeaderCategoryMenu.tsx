@@ -51,7 +51,7 @@ function HeaderCategoryMenu({
       </div>
       <nav
         className={`
-          absolute top-24 left-0 right-0 bg-white bg-opacity-90 backdrop-blur-md
+          absolute top-24 left-0 right-0 bg-white backdrop-blur-md
           ${isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}
           overflow-hidden transition-all duration-300 ease-in-out
         `}
