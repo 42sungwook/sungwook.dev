@@ -20,7 +20,7 @@ function Home() {
       </div>
       <Link
         href="./#ABOUT"
-        className="absolute bottom-20 inline-block"
+        className="absolute bottom-[10%] inline-block"
       >
         <Image
           className="animate-bounce-top"
