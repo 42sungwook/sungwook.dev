@@ -1,32 +1,24 @@
 import HeaderCategory from './HeaderCategory'
+import { CATEGORIES } from '@/constants/category'
 
 function Header() {
   return (
-    <div className="fixed w-full bg-white bg-opacity-70 backdrop-blur-md">
+    <header className="fixed w-full bg-white bg-opacity-70 backdrop-blur-md">
       <div className="flex items-center justify-between px-8 py-4">
         <div className="flex items-center cursor-pointer w-30 h-12">
           SUNGWOOK
         </div>
-        <div className="flex">
-          <HeaderCategory
-            link="./"
-            label="HOME"
-          />
-          <HeaderCategory
-            link="./#ABOUT"
-            label="ABOUT"
-          />
-          <HeaderCategory
-            link="./#PROJECTS"
-            label="PROJECTS"
-          />
-          <HeaderCategory
-            link="./#CONTACT"
-            label="CONTACT"
-          />
-        </div>
+        <nav className="flex">
+          {CATEGORIES.map(({ link, label }) => (
+            <HeaderCategory
+              key={label}
+              link={link}
+              label={label}
+            />
+          ))}
+        </nav>
       </div>
-    </div>
+    </header>
   )
 }
 
