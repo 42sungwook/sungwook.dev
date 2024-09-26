@@ -21,7 +21,11 @@ function Contact() {
 
     const result = await response.json()
 
-    console.log(result)
+    if (result.status === 200) {
+      alert('메일이 전송되었습니다.')
+    } else {
+      alert('메일 전송에 실패했습니다.')
+    }
   }
 
   return (

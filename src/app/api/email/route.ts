@@ -8,6 +8,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     const transporter = nodemailer.createTransport({
       host: 'smtp.naver.com',
       port: 587,
+      secure: false,
       auth: {
         user: process.env.AUTH_USER,
         pass: process.env.AUTH_PASS
@@ -17,10 +18,11 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     await new Promise<void>((resolve, reject) => {
       transporter.sendMail(
         {
-          from: email,
+          from: `"${name} <${email}>" <${process.env.AUTH_USER}>`,
           to: process.env.AUTH_USER,
-          subject: `New contact from ${name}`,
-          text: message
+          subject: `New message from ${name}`,
+          text: message,
+          replyTo: email
         },
         (err, info) => {
           if (err) {
@@ -37,6 +39,9 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     return NextResponse.json({ status: 200 })
   } catch (error) {
     console.error(error)
-    return NextResponse.json({ status: 500, error: error }, { status: 500 })
+    return NextResponse.json(
+      { status: 500, error: 'Something went wrong' },
+      { status: 500 }
+    )
   }
 }
