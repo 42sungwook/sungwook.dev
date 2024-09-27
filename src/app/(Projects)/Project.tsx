@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 function OasisWProject() {
   return (
-    <>
+    <div>
       <div className="w-full relative aspect-[16/9]">
         <Image
           src="/oasisw.png"
@@ -16,7 +16,7 @@ function OasisWProject() {
           }}
         />
       </div>
-      <div className="w-full pt-16">
+      <div className="w-full pt-8 md:pt-16">
         <H2 className="mb-8">OasisW - (주)핏펀즈</H2>
         <p>
           웹 브라우저를 이용해 게임 서버 인스턴스를 생성해주고 게임 서버 기능을
@@ -24,13 +24,13 @@ function OasisWProject() {
           프로젝트 설정부터 배포까지 Next.JS로 개발하였습니다.
         </p>
       </div>
-    </>
+    </div>
   )
 }
 
 function FtStatProject() {
   return (
-    <>
+    <div>
       <div className="w-full relative aspect-[16/9]">
         <Image
           src="/42stat_w.png"
@@ -43,7 +43,7 @@ function FtStatProject() {
           }}
         />
       </div>
-      <div className="w-full pt-16">
+      <div className="w-full pt-8 md:pt-16">
         <H2 className="mb-8">42STAT</H2>
         <p>
           42서울에서 진행한 프로젝트로, 42서울 교육생들의 통계를 보여주는 반응형
@@ -51,13 +51,13 @@ function FtStatProject() {
           90% 이상이 사용하는 서비스로 DAU 100명 이상을 기록하고 있습니다.
         </p>
       </div>
-    </>
+    </div>
   )
 }
 
 function FtGGProject() {
   return (
-    <>
+    <div>
       <div className="w-full relative aspect-[16/9]">
         <Image
           src="/42gg.png"
@@ -70,7 +70,7 @@ function FtGGProject() {
           }}
         />
       </div>
-      <div className="w-full pt-16">
+      <div className="w-full pt-8 md:pt-16">
         <H2 className="mb-8">42GG</H2>
         <p>
           42서울에서 진행한 프로젝트로, 42서울 교육생들을 위한 탁구 매칭 및 랭킹
@@ -78,7 +78,7 @@ function FtGGProject() {
           페이지와 유저 페이지를 구분하여 개발했습니다.
         </p>
       </div>
-    </>
+    </div>
   )
 }
 

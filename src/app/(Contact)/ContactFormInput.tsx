@@ -15,7 +15,7 @@ function ContactNameInput({ register }: InputProps) {
       <input
         required
         {...register('name')}
-        className="w-full rounded-md bg-gray-200 p-8 focus:outline-none"
+        className="w-full rounded-md bg-gray-200 p-4 md:p-6 focus:outline-none"
         placeholder="이름을 적어주세요"
       />
     </InputContainer>
@@ -30,7 +30,7 @@ function ContactEmailInput({ register }: InputProps) {
         required
         type="email"
         {...register('email')}
-        className="w-full rounded-md bg-gray-200 p-8 focus:outline-none"
+        className="w-full rounded-md bg-gray-200 p-4 md:p-6 focus:outline-none"
         placeholder="이메일을 적어주세요"
       />
     </InputContainer>
