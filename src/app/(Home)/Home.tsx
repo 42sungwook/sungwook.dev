@@ -5,8 +5,11 @@ import Link from 'next/link'
 function Home() {
   return (
     <div className="flex items-center justify-center w-full h-[90vh] bg-gradient-to-br from-gray-50 to-gray-100">
-      <div>
-        <h1 className="text-6xl">안녕하세요, 김성욱입니다</h1>
+      <div className="flex flex-col items-center px-8">
+        <span className="flex flex-col text-4xl gap-4 lg:text-6xl lg:flex-row font-bold ">
+          <p>안녕하세요, </p>
+          <p>"성욱" 입니다</p>
+        </span>
         <div className="flex flex-col mt-10 text-center">
           <p>
             우연히 접한 42서울에서 다양한 사람들과 개발하면서 개발의 재미를
