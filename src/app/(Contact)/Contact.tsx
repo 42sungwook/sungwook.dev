@@ -43,7 +43,7 @@ function Contact() {
       <div className="section-container">
         <H1 className="mb-20 text-center">CONTACT</H1>
         <form
-          className="flex flex-col bg-white dark:bg-gray-500 shadow-lg rounded-md gap-8 p-16 max-w-[80rem] w-[95%] mx-auto"
+          className="flex flex-col bg-white dark:bg-gray-500 shadow-lg rounded-md gap-8 p-8 md:p-16 max-w-[80rem] w-[95%] mx-auto"
           onSubmit={handleSubmit(onSubmit)}
         >
           <ContactNameInput register={register} />

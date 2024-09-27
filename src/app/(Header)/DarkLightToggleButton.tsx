@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 function DarkLightToggleButton() {
@@ -24,11 +25,22 @@ function DarkLightToggleButton() {
   }
 
   return (
-    <button
-      onClick={toggleMode}
-      className="px-4 py-4 rounded-md bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
-    >
-      {mode ? '라이트 모드' : '다크 모드'}
+    <button onClick={toggleMode}>
+      {mode ? (
+        <Image
+          src="/sun.svg"
+          alt="light"
+          width={30}
+          height={30}
+        />
+      ) : (
+        <Image
+          src="/moon.svg"
+          alt="dark"
+          width={30}
+          height={30}
+        />
+      )}
     </button>
   )
 }
