@@ -7,13 +7,13 @@ import Header from './(Header)/Header'
 
 export default function App() {
   return (
-    <>
+    <div className="text-black dark:text-white">
       <Header />
       <Home />
       <About />
       <Projects />
       <Contact />
       <Footer />
-    </>
+    </div>
   )
 }

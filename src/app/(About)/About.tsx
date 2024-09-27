@@ -5,7 +5,7 @@ function About() {
   return (
     <section
       id="ABOUT"
-      className="section bg-gradient-to-br from-blue-50 via-white to-purple-50"
+      className="section bg-background-light dark:bg-background-dark"
     >
       <div className="section-container">
         <H1 className="mb-20 text-center">ABOUT ME</H1>

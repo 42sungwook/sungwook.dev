@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { cookies } from 'next/headers'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -11,8 +12,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const cookieStore = cookies()
+  const mode = cookieStore.get('mode')
+
   return (
-    <html lang="en">
+    <html
+      lang="ko"
+      className={mode ? 'dark' : ''}
+    >
       <body>{children}</body>
     </html>
   )

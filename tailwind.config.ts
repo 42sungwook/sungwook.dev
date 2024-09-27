@@ -8,11 +8,14 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/ui/**/*.{js,ts,jsx,tsx,mdx}'
   ],
+  darkMode: 'selector',
   theme: {
     extend: {
       colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)'
+        background: {
+          dark: '#070f21',
+          light: '#f5f5f5'
+        }
       },
       keyframes: {
         'bounce-top': {

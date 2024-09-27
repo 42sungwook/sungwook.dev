@@ -38,18 +38,18 @@ function Contact() {
   return (
     <section
       id="CONTACT"
-      className="section bg-gradient-to-br from-gray-50 via-gray to-gray-100"
+      className="section bg-background-light dark:bg-background-dark"
     >
       <div className="section-container">
         <H1 className="mb-20 text-center">CONTACT</H1>
         <form
-          className="flex flex-col bg-white shadow-lg rounded-md gap-8 p-16 max-w-[80rem] w-[95%] mx-auto"
+          className="flex flex-col bg-white dark:bg-gray-500 shadow-lg rounded-md gap-8 p-16 max-w-[80rem] w-[95%] mx-auto"
           onSubmit={handleSubmit(onSubmit)}
         >
           <ContactNameInput register={register} />
           <ContactEmailInput register={register} />
           <ContactMessageInput register={register} />
-          <div className="flex justify-end">
+          <div className="flex justify-center lg:justify-end">
             <Button type="submit">SUBMIT</Button>
           </div>
         </form>
