@@ -1,5 +1,5 @@
 import { H1 } from '@/ui'
-import Project from './Project'
+import { FtGGProject, FtStatProject, OasisWProject } from './Project'
 
 function Projects() {
   return (
@@ -10,9 +10,9 @@ function Projects() {
       <div className="section-container">
         <H1 className="mb-20 text-center">PROJECTS</H1>
         <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-10 mb-20">
-          <Project />
-          <Project />
-          <Project />
+          <OasisWProject />
+          <FtStatProject />
+          <FtGGProject />
         </div>
       </div>
     </section>

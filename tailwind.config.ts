@@ -57,10 +57,10 @@ module.exports = {
     plugin(function ({ addUtilities }) {
       const newUtilities = {
         '.section-container': {
-          'max-width': '120rem',
+          'max-width': '100rem',
           'margin-left': 'auto',
           'margin-right': 'auto',
-          width: '92%'
+          width: '90%'
         },
         '.section': {
           'padding-top': '7rem',
