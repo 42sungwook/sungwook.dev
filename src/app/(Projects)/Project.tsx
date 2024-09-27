@@ -9,7 +9,7 @@ function OasisWProject() {
           src="/oasisw.png"
           alt="oasisw-project"
           fill
-          sizes="100vw"
+          sizes="(max-width: 768px) 90vw, 50vw"
           priority
           style={{
             objectFit: 'cover'
@@ -36,7 +36,7 @@ function FtStatProject() {
           src="/42stat_w.png"
           alt="42stat-project"
           fill
-          sizes="100vw"
+          sizes="(max-width: 768px) 90vw, 50vw"
           priority
           style={{
             objectFit: 'cover'
@@ -63,7 +63,7 @@ function FtGGProject() {
           src="/42gg.png"
           alt="42gg-project"
           fill
-          sizes="100vw"
+          sizes="(max-width: 768px) 90vw, 50vw"
           priority
           style={{
             objectFit: 'cover'

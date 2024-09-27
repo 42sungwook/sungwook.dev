@@ -1,8 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
-import { cookies } from 'next/headers'
 
 function DarkLightToggleButton() {
   const isDark =
