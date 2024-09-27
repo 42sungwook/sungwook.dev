@@ -8,7 +8,7 @@ function Home() {
       <div className="flex flex-col items-center px-8">
         <span className="flex flex-col text-4xl gap-4 lg:text-6xl lg:flex-row font-bold ">
           <p>안녕하세요, </p>
-          <p>"성욱" 입니다</p>
+          <p>&ldquo;성욱&ldquo; 입니다</p>
         </span>
         <div className="flex flex-col mt-10 text-center">
           <p>
