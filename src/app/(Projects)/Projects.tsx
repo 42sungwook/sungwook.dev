@@ -9,7 +9,7 @@ function Projects() {
     >
       <div className="section-container">
         <H1 className="mb-20 text-center">PROJECTS</H1>
-        <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-20 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] lg:gap-20 mb-20">
           <OasisWProject />
           <FtStatProject />
           <FtGGProject />
