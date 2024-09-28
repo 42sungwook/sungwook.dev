@@ -3,6 +3,7 @@ import { cookies } from 'next/headers'
 import './globals.css'
 import Header from './(Header)/Header'
 import Footer from './(Footer)/Footer'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata: Metadata = {
   title: 'SUNGWOOK.DEV',
@@ -25,6 +26,7 @@ export default function RootLayout({
         <Header isDark={isDark} />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
