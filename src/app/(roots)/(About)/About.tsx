@@ -9,7 +9,7 @@ function About() {
     >
       <div className="section-container">
         <H1 className="mb-20 text-center">ABOUT ME</H1>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-40">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-40">
           <div>
             <H2 className="mb-8">저는 이런 사람이에요!</H2>
             <p className="mb-16">

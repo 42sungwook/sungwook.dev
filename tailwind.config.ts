@@ -13,9 +13,10 @@ const config: Config = {
     extend: {
       colors: {
         background: {
-          dark: '#070f21',
-          light: '#f5f5f5'
-        }
+          dark: '#070F21',
+          light: '#F5F5F5'
+        },
+        title: '#9E9FA6'
       },
       keyframes: {
         'bounce-top': {

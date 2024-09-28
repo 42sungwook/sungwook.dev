@@ -1,8 +1,8 @@
-import About from './(Root)/(About)/About'
-import Contact from './(Root)/(Contact)/Contact'
-import Footer from './(Root)/(Footer)/Footer'
-import Home from './(Root)/(Home)/Home'
-import Project from './(Root)/(Project)/Project'
+import About from './(roots)/(About)/About'
+import Contact from './(roots)/(Contact)/Contact'
+import Footer from './(roots)/(Footer)/Footer'
+import Home from './(roots)/(Home)/Home'
+import Project from './(roots)/(Project)/Project'
 
 export default function App() {
   return (

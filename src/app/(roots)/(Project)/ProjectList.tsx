@@ -28,14 +28,14 @@ const ProjectImage = ({ src, alt }: ProjectImageProps) => {
 const ProjectDescription = ({
   title,
   description,
-	link,
+  link,
   className = ''
 }: ProjectDescriptionProps) => {
   return (
-    <div className={`w-full pt-8 md:pt-16 ${className}`}>
+    <div className={`w-full px-4 md:px-12 pt-8 ${className}`}>
       <H2 className="mb-8">{title}</H2>
       <p className="mb-8">{description}</p>
-			<Button link={link}>자세히 보기</Button>
+      <Button link={link}>자세히 보기</Button>
     </div>
   )
 }
@@ -43,15 +43,17 @@ const ProjectDescription = ({
 const Project = ({ project, isLast }: ProjectProps) => {
   return (
     <>
-      <ProjectImage
-        src={project.imageSrc}
-        alt={project.imageAlt}
-      />
+      <div className="w-full max-w-[800px] lg:max-w-none mx-auto">
+        <ProjectImage
+          src={project.imageSrc}
+          alt={project.imageAlt}
+        />
+      </div>
       <ProjectDescription
         title={project.title}
         description={project.description}
-				link={project.link}
-        className={isLast ? '' : 'mb-24'}
+        link={project.link}
+        className={isLast ? '' : 'mb-24 lg:mb-0'}
       />
     </>
   )
