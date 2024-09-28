@@ -1,4 +1,4 @@
-import { H1 } from '@/ui'
+import { H2 } from '@/ui'
 import ProjectList from './ProjectList'
 
 function Project() {
@@ -8,7 +8,7 @@ function Project() {
       className="section bg-background-light dark:bg-background-dark"
     >
       <div className="section-container">
-        <H1 className="mb-20 text-center">PROJECTS</H1>
+        <H2 className="mb-20 text-center">PROJECTS</H2>
         <ProjectList />
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { H1, H2 } from '@/ui'
+import { H2, H3 } from '@/ui'
 import Skills from './Skills'
 
 function About() {
@@ -8,10 +8,10 @@ function About() {
       className="section bg-background-light dark:bg-background-dark"
     >
       <div className="section-container">
-        <H1 className="mb-20 text-center">ABOUT ME</H1>
+        <H2 className="mb-20 text-center">ABOUT ME</H2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-40">
           <div>
-            <H2 className="mb-8">저는 이런 사람이에요!</H2>
+            <H3 className="mb-8">저는 이런 사람이에요!</H3>
             <p className="mb-16">
               안녕하세요 저는 프론트엔드 개발자로 성장하고 있는 김성욱입니다.
               <br />
@@ -29,14 +29,14 @@ function About() {
               저는 현재 구직 중이며 새로운 기회를 찾고 있습니다. 언제든지
               연락주세요!
             </p>
-            <H2 className="mb-4">교육</H2>
+            <H3 className="mb-4">교육</H3>
             <p>(2022.11 - 2024.08) 42서울 [공통과정 수료]</p>
             <p className="mb-8">
               (2015.03 - 2022.02) 한양대학교 화학공학과 학사 [졸업]
             </p>
-            <H2 className="mb-4">경력</H2>
+            <H3 className="mb-4">경력</H3>
             <p className="mb-8">(2024.05 - 2024.08) (주)핏펀즈 [인턴]</p>
-            <H2 className="mb-4">수상 및 자격증</H2>
+            <H3 className="mb-4">수상 및 자격증</H3>
             <p>(2024.09) PCCP Javascript Lv3.</p>
             <p>(2024.08) Opic 영어 IH 등급</p>
             <p>
@@ -49,7 +49,7 @@ function About() {
             </p>
           </div>
           <div>
-            <H2 className="mb-8">기술 스택</H2>
+            <H3 className="mb-8">기술 스택</H3>
             <div className="flex flex-wrap gap-2">
               <Skills>HTML</Skills>
               <Skills>CSS</Skills>

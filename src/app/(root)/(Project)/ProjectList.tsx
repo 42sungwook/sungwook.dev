@@ -1,4 +1,4 @@
-import { Button, H2 } from '@/ui'
+import { Button, H3 } from '@/ui'
 import Image from 'next/image'
 import type {
   Project,
@@ -33,7 +33,7 @@ const ProjectDescription = ({
 }: ProjectDescriptionProps) => {
   return (
     <div className={`w-full px-4 md:px-12 pt-8 ${className}`}>
-      <H2 className="mb-8">{title}</H2>
+      <H3 className="mb-8">{title}</H3>
       <p className="mb-8">{description}</p>
       <Button link={link}>자세히 보기</Button>
     </div>
