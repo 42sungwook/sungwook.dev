@@ -1,17 +1,15 @@
-import About from './(About)/About'
-import Contact from './(Contact)/Contact'
-import Footer from './(Footer)/Footer'
-import Home from './(Home)/Home'
-import Projects from './(Projects)/Projects'
-import Header from './(Header)/Header'
+import About from './(Root)/(About)/About'
+import Contact from './(Root)/(Contact)/Contact'
+import Footer from './(Root)/(Footer)/Footer'
+import Home from './(Root)/(Home)/Home'
+import Project from './(Root)/(Project)/Project'
 
 export default function App() {
   return (
     <div className="text-black dark:text-white">
-      <Header />
       <Home />
       <About />
-      <Projects />
+      <Project />
       <Contact />
       <Footer />
     </div>

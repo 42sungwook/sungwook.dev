@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { cookies } from 'next/headers'
 import './globals.css'
+import Header from './(Root)/(Header)/Header'
 
 export const metadata: Metadata = {
   title: 'SUNGWOOK.DEV',
@@ -19,7 +20,10 @@ export default function RootLayout({
       lang="ko"
       className={mode === 'true' ? 'dark' : ''}
     >
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
