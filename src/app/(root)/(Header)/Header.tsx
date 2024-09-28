@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import DarkLightToggleButton from './DarkLightToggleButton'
 import HeaderCategoryMenu from './HeaderCategoryMenu'
-import { device } from '@/utils/device'
+import { getDevice } from '@/utils/device'
 
 function Header({ isDark }: { isDark: boolean }) {
+  const device = getDevice()
   return (
     <header className="fixed w-full bg-white dark:bg-gray-900 bg-opacity-70 backdrop-blur-md z-50 text-black dark:text-white">
       <div className="flex items-center justify-between px-8 py-4">

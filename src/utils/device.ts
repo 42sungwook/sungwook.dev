@@ -1,4 +1,7 @@
 import { headers } from 'next/headers'
 
-const headerList = headers()
-export const device = headerList.get('x-is-mobile')
+export function getDevice() {
+  const headerList = headers()
+  const device = headerList.get('x-is-mobile')
+  return device
+}
