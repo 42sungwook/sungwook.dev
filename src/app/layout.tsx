@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { cookies } from 'next/headers'
 import './globals.css'
 import Header from './(Header)/Header'
+import Footer from './(Footer)/Footer'
 
 export const metadata: Metadata = {
   title: 'SUNGWOOK.DEV',
@@ -18,11 +19,12 @@ export default function RootLayout({
   return (
     <html
       lang="ko"
-      className={isDark ? 'dark' : ''}
+      className={`${isDark ? 'dark' : ''} bg-white dark:bg-black`}
     >
-      <body>
+      <body className="text-black dark:text-white">
         <Header isDark={isDark} />
         {children}
+        <Footer />
       </body>
     </html>
   )
