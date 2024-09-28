@@ -1,19 +1,16 @@
 'use client'
 
-import { useMemo } from 'react'
-import { useDeviceType } from '@/hooks/device'
+import { useMemo, useState, useCallback } from 'react'
 import HeaderCategoryItem from './HeaderCategoryItem'
 import { CATEGORIES } from '@/constants/category'
 import Image from 'next/image'
+import { useDeviceType } from '@/hooks/device'
 
-function HeaderCategoryMenu({
-  isMenuOpen,
-  toggleMenu
-}: {
-  isMenuOpen: boolean
-  toggleMenu: () => void
-}) {
+function HeaderCategoryMenu() {
   const device = useDeviceType()
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const toggleMenu = useCallback(() => setIsMenuOpen((prev) => !prev), [])
 
   const categories = useMemo(
     () =>
@@ -25,7 +22,7 @@ function HeaderCategoryMenu({
           <HeaderCategoryItem
             link={link}
             label={label}
-            onClick={toggleMenu}
+            onClick={() => toggleMenu()}
           />
         </div>
       )),

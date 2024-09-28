@@ -14,14 +14,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   const cookieStore = cookies()
-  const mode = cookieStore.get('mode')?.value
+  const isDark = cookieStore.get('mode')?.value === 'true' ? true : false
   return (
     <html
       lang="ko"
-      className={mode === 'true' ? 'dark' : ''}
+      className={isDark ? 'dark' : ''}
     >
       <body>
-        <Header />
+        <Header isDark={isDark} />
         {children}
       </body>
     </html>

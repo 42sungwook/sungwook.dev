@@ -3,10 +3,7 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
-function DarkLightToggleButton() {
-  const isDark =
-    document.cookie.split('; ').find((row) => row.startsWith('mode=')) ===
-    'mode=true'
+function DarkLightToggleButton({ isDark }: { isDark: boolean }) {
   const [mode, setMode] = useState(isDark)
 
   useEffect(() => {

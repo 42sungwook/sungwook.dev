@@ -1,23 +1,11 @@
-'use client'
-
-import { useState } from 'react'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
-
-const DarkLightToggleButton = dynamic(() => import('./DarkLightToggleButton'), {
-  ssr: false
-})
+import DarkLightToggleButton from './DarkLightToggleButton'
 const HeaderCategoryMenu = dynamic(() => import('./HeaderCategoryMenu'), {
   ssr: false
 })
 
-function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
-
+function Header({ isDark }: { isDark: boolean }) {
   return (
     <header className="fixed w-full bg-white dark:bg-gray-900 bg-opacity-70 backdrop-blur-md z-50 text-black dark:text-white">
       <div className="flex items-center justify-between px-8 py-4">
@@ -25,11 +13,8 @@ function Header() {
           <Link href="/">SUNGWOOK</Link>
         </div>
         <div className="flex gap-4">
-          <DarkLightToggleButton />
-          <HeaderCategoryMenu
-            isMenuOpen={isMenuOpen}
-            toggleMenu={toggleMenu}
-          />
+          <DarkLightToggleButton isDark={isDark} />
+          <HeaderCategoryMenu />
         </div>
       </div>
     </header>
