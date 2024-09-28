@@ -7,6 +7,9 @@ export function middleware(request: NextRequest) {
     'x-is-mobile',
     device.type === 'mobile' ? 'mobile' : 'desktop'
   )
-
   return response
+}
+
+export const config = {
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)']
 }
