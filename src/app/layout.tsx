@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { cookies } from 'next/headers'
 import './globals.css'
-import Header from './(root)/(Header)/Header'
+import Header from './(Header)/Header'
 
 export const metadata: Metadata = {
   title: 'SUNGWOOK.DEV',

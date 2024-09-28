@@ -13,7 +13,7 @@ function Header({ isDark }: { isDark: boolean }) {
         </div>
         <div className="flex gap-4">
           <DarkLightToggleButton isDark={isDark} />
-          <HeaderCategoryMenu device={device} />
+          <HeaderCategoryMenu initialDevice={device} />
         </div>
       </div>
     </header>

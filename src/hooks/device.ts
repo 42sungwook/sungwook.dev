@@ -1,30 +1,28 @@
-import { Device } from '@/types/device'
-import { useMediaQuery } from 'react-responsive'
+import { useState, useEffect } from 'react'
 import { BREAKPOINT } from '@/constants/responsive'
 
-const useIsDesktop = () => useMediaQuery({ minWidth: BREAKPOINT.TABLET })
+const getDevice = (width: number) => {
+  if (width >= BREAKPOINT.TABLET) return 'desktop'
+  if (width >= BREAKPOINT.MOBILE) return 'tablet'
+  return 'mobile'
+}
 
-const useIsTablet = () =>
-  useMediaQuery({
-    minWidth: BREAKPOINT.MOBILE,
-    maxWidth: BREAKPOINT.TABLET - 1
-  })
+export const useDevice = ({ initialDevice }: { initialDevice: string }) => {
+  const [device, setDevice] = useState(initialDevice)
 
-const useIsMobile = () => useMediaQuery({ maxWidth: BREAKPOINT.MOBILE - 1 })
+  useEffect(() => {
+    const updateDevice = () => {
+      setDevice(getDevice(window.innerWidth))
+    }
 
-export const useDeviceType = (): Device | null => {
-  const isDesktop = useIsDesktop()
-  const isTablet = useIsTablet()
-  const isMobile = useIsMobile()
+    updateDevice()
 
-  if (isDesktop) {
-    return 'desktop'
-  }
-  if (isTablet) {
-    return 'tablet'
-  }
-  if (isMobile) {
-    return 'mobile'
-  }
-  return null
+    window.addEventListener('resize', updateDevice)
+
+    return () => {
+      window.removeEventListener('resize', updateDevice)
+    }
+  }, [])
+
+  return device
 }
