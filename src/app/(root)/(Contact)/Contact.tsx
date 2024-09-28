@@ -1,6 +1,6 @@
 'use client'
 
-import { Button, H1 } from '@/ui'
+import { Button, H2 } from '@/ui'
 import { type FieldValues, useForm } from 'react-hook-form'
 import {
   ContactEmailInput,
@@ -41,7 +41,7 @@ function Contact() {
       className="section bg-background-light dark:bg-background-dark"
     >
       <div className="section-container">
-        <H1 className="mb-20 text-center">CONTACT</H1>
+        <H2 className="mb-20 text-center">CONTACT</H2>
         <form
           className="flex flex-col bg-white dark:bg-gray-500 shadow-lg rounded-md gap-8 p-8 md:p-16 max-w-[80rem] w-[95%] mx-auto"
           onSubmit={handleSubmit(onSubmit)}
