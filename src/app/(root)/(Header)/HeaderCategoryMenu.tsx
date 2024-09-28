@@ -4,10 +4,8 @@ import { useMemo, useState, useCallback } from 'react'
 import HeaderCategoryItem from './HeaderCategoryItem'
 import { CATEGORIES } from '@/constants/category'
 import Image from 'next/image'
-import { useDeviceType } from '@/hooks/device'
 
-function HeaderCategoryMenu() {
-  const device = useDeviceType()
+function HeaderCategoryMenu({ device }: { device: string | null }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = useCallback(() => setIsMenuOpen((prev) => !prev), [])

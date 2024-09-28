@@ -1,9 +1,7 @@
-import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import DarkLightToggleButton from './DarkLightToggleButton'
-const HeaderCategoryMenu = dynamic(() => import('./HeaderCategoryMenu'), {
-  ssr: false
-})
+import HeaderCategoryMenu from './HeaderCategoryMenu'
+import { device } from '@/utils/device'
 
 function Header({ isDark }: { isDark: boolean }) {
   return (
@@ -14,7 +12,7 @@ function Header({ isDark }: { isDark: boolean }) {
         </div>
         <div className="flex gap-4">
           <DarkLightToggleButton isDark={isDark} />
-          <HeaderCategoryMenu />
+          <HeaderCategoryMenu device={device} />
         </div>
       </div>
     </header>
