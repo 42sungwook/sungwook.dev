@@ -1,6 +1,6 @@
 import ProjectLayout from '@/app/(project)/ProjectLayout'
+import ImageSlider from '@/app/_components/ImageSlider'
 import { H1, H2 } from '@/ui'
-import Image from 'next/image'
 
 export default function FtGG() {
   return (
@@ -8,18 +8,22 @@ export default function FtGG() {
       <div className="flex w-full text-title mb-12 gap-6">
         <H1>42GG</H1>
       </div>
-      <div className="w-full relative aspect-[16/9]">
-        <Image
-          src="/42gg.svg"
-          alt="42gg-project"
-          fill
-          sizes="90vw"
-          priority
-          style={{
-            objectFit: 'cover'
-          }}
-        />
-      </div>
+      <ImageSlider
+        images={[
+          '/42gg/42gg_1.png',
+          '/42gg/42gg_2.png',
+          '/42gg/42gg_3.png',
+          '/42gg/42gg_4.png',
+          '/42gg/42gg_5.png',
+          '/42gg/42gg_6.png',
+          '/42gg/42gg_7.png',
+          '/42gg/42gg_8.png',
+          '/42gg/42gg_9.png',
+          '/42gg/42gg_10.png',
+          '/42gg/42gg_11.png',
+          '/42gg/42gg_12.png'
+        ]}
+      />
       <div className="w-full mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
         <div>
           <H2 className="mb-8">서비스 소개</H2>

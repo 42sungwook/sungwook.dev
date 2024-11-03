@@ -1,7 +1,7 @@
 export const PROJECTS = [
   {
     id: 'oasisw',
-    imageSrc: '/oasisw.svg',
+    imageSrc: '/oasisw/oasisw.svg',
     imageAlt: 'oasisw-project',
     title: 'OasisW - (주)핏펀즈',
     description:
@@ -10,7 +10,7 @@ export const PROJECTS = [
   },
   {
     id: '42stat',
-    imageSrc: '/42stat.svg',
+    imageSrc: '/42stat/42stat.svg',
     imageAlt: '42stat-project',
     title: '42STAT',
     description:
@@ -19,7 +19,7 @@ export const PROJECTS = [
   },
   {
     id: '42gg',
-    imageSrc: '/42gg.svg',
+    imageSrc: '/42gg/42gg.svg',
     imageAlt: '42gg-project',
     title: '42GG',
     description:
