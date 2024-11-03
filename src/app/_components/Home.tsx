@@ -5,6 +5,32 @@ import Link from 'next/link'
 function Home() {
   return (
     <div className="flex items-center justify-center w-full h-[90vh] bg-background-light dark:bg-background-dark">
+      <div className="absolute flex flex-col justify-center w-16 top-50 left-0 bg-black">
+        <Link
+          href="https://github.com/42sungwook"
+          target="_blank"
+          className="p-4 border-2 border-white"
+        >
+          <Image
+            src="/github-logo.svg"
+            width={30}
+            height={30}
+            alt="github"
+          />
+        </Link>
+        <Link
+          href="https://sungwook.tistory.com"
+          target="_blank"
+          className="p-4 border-2 border-white"
+        >
+          <Image
+            src="/tistory.svg"
+            width={30}
+            height={30}
+            alt="blog"
+          />
+        </Link>
+      </div>
       <div className="flex flex-col items-center px-8">
         <span className="flex flex-col text-5xl gap-4 md:text-6xl md:flex-row font-bold ">
           <p>안녕하세요, </p>
