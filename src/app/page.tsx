@@ -1,7 +1,7 @@
-import About from './(root)/(About)/About'
-import Contact from './(root)/(Contact)/Contact'
-import Home from './(root)/(Home)/Home'
-import Project from './(root)/(Project)/Project'
+import About from '@/app/_components/About'
+import Contact from '@/app/_components/Contact'
+import Home from '@/app/_components/Home'
+import Project from '@/app/_components/Project'
 
 export default function App() {
   return (
