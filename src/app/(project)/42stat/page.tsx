@@ -1,26 +1,34 @@
 import ProjectLayout from '@/app/(project)/ProjectLayout'
+import ImageSlider from '@/app/_components/ImageSlider'
 import { H1, H2 } from '@/ui'
-import Image from 'next/image'
 
 export default function FtStat() {
   return (
     <ProjectLayout>
       <div className="flex w-full text-title mb-12 gap-6">
         <H1 className="font-extrabold text-5xl">42STAT</H1>
-        <p className="text-3xl flex items-center">(V.0.4.4)</p>
+        <p className="text-3xl flex items-center">(v.0.4.4)</p>
       </div>
-      <div className="w-full relative aspect-[16/9]">
-        <Image
-          src="/42stat.svg"
-          alt="42stat-project"
-          fill
-          sizes="90vw"
-          priority
-          style={{
-            objectFit: 'cover'
-          }}
-        />
-      </div>
+      <ImageSlider
+        images={[
+          '/42stat/stat_1.png',
+          '/42stat/stat_2.png',
+          '/42stat/stat_3.png',
+          '/42stat/stat_4.png',
+          '/42stat/stat_5.png',
+          '/42stat/stat_6.png',
+          '/42stat/stat_7.png',
+          '/42stat/stat_8.png',
+          '/42stat/stat_9.png',
+          '/42stat/stat_10.png',
+          '/42stat/stat_11.png',
+          '/42stat/stat_12.png',
+          '/42stat/stat_13.png',
+          '/42stat/stat_14.png',
+          '/42stat/stat_15.png',
+          '/42stat/stat_16.png'
+        ]}
+      />
       <div className="w-full mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
         <div>
           <H2 className="mb-8">서비스 소개</H2>

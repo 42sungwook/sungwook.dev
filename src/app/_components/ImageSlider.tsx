@@ -34,18 +34,18 @@ function ImageSlider({ images }: { images: string[] }) {
         {images.map((image, i) => (
           <div
             key={i}
-            className="flex-shrink-0 w-full rounded-md overflow-hidden relative aspect-[16/9]"
+            className="flex-shrink-0 w-full px-2"
           >
-            <Image
-              src={image}
-              alt={'project image'}
-              fill
-              sizes="90vw"
-              style={{
-                objectFit: 'cover'
-              }}
-              priority={i === 0}
-            />
+            <div className="relative w-full aspect-[16/9] rounded-md overflow-hidden bg-neutral-900">
+              <Image
+                src={image}
+                alt={'project image'}
+                fill
+                sizes="90vw"
+                className="rounded-md object-contain"
+                priority={i === 0}
+              />
+            </div>
           </div>
         ))}
       </div>
