@@ -1,6 +1,6 @@
 import ProjectLayout from '@/app/(project)/ProjectLayout'
+import ImageSlider from '@/app/_components/ImageSlider'
 import { H1, H2 } from '@/ui'
-import Image from 'next/image'
 
 export default function Oasisw() {
   return (
@@ -12,18 +12,20 @@ export default function Oasisw() {
         </div>
         <p className="flex justify-center items-center text-3xl">(주)핏펀즈</p>
       </div>
-      <div className="w-full relative aspect-[16/9]">
-        <Image
-          src="/oasisw.svg"
-          alt="oasisw-project"
-          fill
-          sizes="90vw"
-          priority
-          style={{
-            objectFit: 'cover'
-          }}
-        />
-      </div>
+      <ImageSlider
+        images={[
+          '/oasisw/oasis_1.png',
+          '/oasisw/oasis_2.png',
+          '/oasisw/oasis_3.png',
+          '/oasisw/oasis_4.png',
+          '/oasisw/oasis_5.png',
+          '/oasisw/oasis_6.png',
+          '/oasisw/oasis_7.png',
+          '/oasisw/oasis_8.png',
+          '/oasisw/oasis_9.png',
+          '/oasisw/oasis_10.png'
+        ]}
+      />
       <div className="w-full mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
         <div>
           <H2 className="mb-8">서비스 소개</H2>
