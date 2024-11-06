@@ -1,6 +1,7 @@
 import ProjectLayout from '@/app/(project)/ProjectLayout'
 import ImageSlider from '@/app/_components/ImageSlider'
 import { H1, H2 } from '@/ui'
+import Link from 'next/link'
 
 export default function FtStat() {
   return (
@@ -39,6 +40,13 @@ export default function FtStat() {
             42서울 경진대회에서 대상을 받았으며 매일 100명 이상의 트래픽이
             발생합니다.
           </p>
+          <Link
+            href="https://github.com/42Statistics/42Stat-Frontend"
+            target="_blank"
+            className="text-blue-500"
+          >
+            깃허브 링크
+          </Link>
         </div>
         <div>
           <H2 className="mb-8">작업 기간</H2>
