@@ -7,7 +7,10 @@ import { Analytics } from '@vercel/analytics/react'
 
 export const metadata: Metadata = {
   title: 'SUNGWOOK.DEV',
-  description: 'Portfolio of Sungwook Kim'
+  description: 'Portfolio of Sungwook Kim',
+  icons: {
+    icon: '/logo.svg'
+  }
 }
 
 export default function RootLayout({
